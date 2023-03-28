@@ -1,5 +1,9 @@
-import './style.css'
+import './style.css';
 
-function App(): void {
-  return
-}
+import AppTest from './app.test';
+import { inspectLang } from './kub-spa/spa-application/helpers/inspect-lang.helper';
+AppTest.launchApp()
+
+inspectLang()
+
+// print()
