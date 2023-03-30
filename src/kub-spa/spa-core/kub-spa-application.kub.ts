@@ -1,24 +1,18 @@
 
 // @imports(system styling)
 import desktopStyling from './style-sheets/desktop-layer.module.css';
-
 // @imports(events)
 import { IPageRenderEvent, IPageNotFoundEvent } from './events';
 import { PageNotFoundEvent, PageRenderEvent } from './events';
-
 // @imports(errors)
 import { RouteReassign, Page404NotSpecified } from "./errors";
-
 // @modules-iterfaces
 import { ISPARouter } from "./spa-router";
-
 // @coretypes
 import { KUBPageType } from './types/core-types.type';
 import { IKUBPage } from './spa-page';
-
 // @modules
 import { KUBRouter } from "./spa-router";
-
 
 // @typeclass
 class KUBAppsession {
@@ -27,10 +21,9 @@ class KUBAppsession {
     public renderedPage!: IKUBPage;
 };
 
-
 // @packagemain
 // @pattern(singleton, final)
-export default class KUBApplication
+export class KUBApplication
 {
     // @staticproperty
     private static _instance_?: KUBApplication;
@@ -48,6 +41,10 @@ export default class KUBApplication
         root.className = desktopStyling.DesktopLayer;
         return root
     })();
+    // @getter
+    public static GET_DESKTOP_LAYER(): HTMLElement {
+        return this.DESKTOP_LAYER
+    }
     
     // @UpperLevelAPI
     // @constructor

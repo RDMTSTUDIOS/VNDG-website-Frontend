@@ -1,5 +1,5 @@
 import { KUBPageType } from "../types/core-types.type";
-import KUBPage from "../spa-page/kub-spa-page.kub";
+import { IKUBPage } from "../spa-page";
 
 
 
@@ -15,7 +15,7 @@ export interface IPageRenderEvent {
 
     route: string;
     pageToBeRendered: KUBPageType;
-    pageToBeRemoved: KUBPage;
+    pageToBeRemoved: IKUBPage;
     preventRendering: VoidFunction;
     alreadyVisitedSite: boolean;
 };

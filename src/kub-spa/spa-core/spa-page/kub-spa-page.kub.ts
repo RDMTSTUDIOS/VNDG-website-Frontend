@@ -1,5 +1,5 @@
-import KUBApplication from "../kub-spa-application.kub";
-import { IKUBPage } from "./kub-spa-page.interface";
+import {KUBApplication} from "../kub-spa-application.kub";
+import {IKUBPage} from "./kub-spa-page.interface";
 
 // @pattern(abstract)
 export abstract class KUBPage implements IKUBPage
